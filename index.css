@@ -1,0 +1,17 @@
+/* Tailwind ke 3 default layers — inhe kabhi mat hataana */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kiosk ek touchscreen device hai, isliye poore app me
+   text selection aur double-tap-zoom disable kar rahe hain
+   taaki app "native app" jaisa feel de. */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-paper text-ink font-body;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
